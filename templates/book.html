@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section id="book-ticket">
+        <h1>Book Ticket</h1>
+        <div class="book-ticket-container" >
+            <form action="">
+                <div class="form-elements">
+                    <label for="flight_id">Fligth Id</label>
+                    <input type="text" name="flight_id" id="flight_id">
+                </div>
+                <div class="form-elements">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div class="form-elements">
+                    <label for="f_class">Flight Class</label>
+                    <input list="classes" name="f_class" id="f_class">
+                    <datalist id="classes">
+                        <option value="Economic Class">
+                        <option value="Business Class">
+                        <option value="First Class">
+                    </datalist>
+                </div>
+                <div class="form-elements">
+                    <input type="button" class="btn btn-primary" value="Calculate Price">
+                </div>
+                <div class="form-elements">
+                    <label for="price">Price</label>
+                    <input type="text" name="price" id="price">
+                </div>
+                <div class="form-elements">
+                    <input type="button" class="btn btn-primary" value="Book">
+                </div>
+                <div class="form-elements">
+                    <label for="t_num">Ticket Number</label>
+                    <input type="text" name="t_num" id="t_num">
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

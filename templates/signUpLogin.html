@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for ('static',filename='css/login.css') }}">
+    <title>SignUpLogin</title>
+</head>
+<body>
+    <div class="background">
+       <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+            
+            <form id="login" class="input-group" method="POST">
+                <div class="input-div">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" class="input-field" name="uname" placeholder="User Id" required>
+                </div>
+                <div class="input-div">
+                    <i class="fas fa-lock icon"></i>
+                    <input type="text" class="input-field" name="pass" placeholder=" Password" required>
+                </div>
+                <button type="submit" class="submit-btn">Log in</button>
+                <div>
+                    Create an account? Click Register
+                </div>
+            </form>
+            <form id="register" class="input-group" method="POST">
+                <div class="input-div">
+                    <!-- <label for="S_name"><b>Name</b></label> -->
+                    <input type="text" class="input-field" name="name" placeholder="Name" >
+                </div>
+                <!-- <div class="input-div">
+                    <input type="text" class="input-field" name="S_address" placeholder="Enter address">
+                </div> -->
+                <div class="input-div">
+                    <!-- <label for="S_name"><b>Name</b></label> -->
+                    <input type="email" class="input-field" name="email" placeholder="Email Id">
+                </div>
+                <div class="input-div">
+                    <!-- <label for="S_uname"><b>User Name</b></label> -->
+                    <input type="text" class="input-field" name="S_uname" placeholder="User Name" required>
+                </div>
+                <div class="input-div">
+                    <!-- <label for="S_pass"><b>Password</b></label> -->
+                    <input type="password" class="input-field" name="S_pass" placeholder="Enter Password" required>
+                </div>
+                <div class="input-div">
+                    <!-- <label for="S_Cpass"><b>Confirm Password</b></label> -->
+                    <input type="text" class="input-field" name="Cpass" placeholder="Confirm Password">
+                </div>
+                <div class="input-div">
+                    <input type="radio" name="gender" class="gender" id="male"><label for="male" class="gender-btn">Male</label>                 
+                    <input  type="radio" name="gender" class="gender" id="female"><label for="female" class="gender-btn">Female</label>
+                    <hr>
+                </div>
+                <div class="input-div">
+                    <!-- <label for="S_phone"><b>Phone</b></label> -->
+                    <input type="tel" class="input-field" name="phone" placeholder="Contact no">
+                </div>
+                <div>
+                    <button type="submit" class="submit-btn">SIGN UP</button>
+                    <button type="reset" class="submit-btn">RESET</button>
+                </div>
+                
+            </form>
+        </div>
+        
+    </div>
+
+    <script>
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+        function register(){
+            x.style.left="-400px";
+            y.style.left="50px";
+            z.style.left="110px";
+        }
+
+        function login(){
+            x.style.left="50px";
+            y.style.left="450px";
+            z.style.left="0";
+        }
+
+
+    </script>
+</body>
+</html>
